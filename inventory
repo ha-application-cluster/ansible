@@ -1,0 +1,25 @@
+# two environments : dev (include integration, testing & perf)  & prod
+# 4 machines : 1 dev, 3 prod
+
+
+node-01
+node-02
+node-03
+node-04
+
+# ========= DEVELOPMENT ================
+[dev:vars]
+environment=DEVELOPMENT
+
+[dev]
+node-01
+
+
+# ========= PRODUCTION ================
+[prod:vars]
+environment=PRODUCTION
+
+[prod]
+node-02
+node-03
+node-04
